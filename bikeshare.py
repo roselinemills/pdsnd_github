@@ -2,6 +2,7 @@ import time
 import pandas as pd
 import numpy as np
 
+#csv data is uploaded to github in project
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -26,7 +27,7 @@ def get_filters():
             continue
         else:
             break
-            
+
         # TO DO: get user input for month (all, january, february, ... , june)
     months = ['all','january','february','march','april','may','june']
     while True:
@@ -101,7 +102,7 @@ def time_stats(df):
     # TO DO: display the most common start hour
     most_common_hour = df['hour'].mode()[0]
     print ('\nMost common start hour:', most_common_hour)
-    
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -123,7 +124,7 @@ def station_stats(df):
     df['Frequent Trip'] = 'From ' + df['Start Station'] + ' to ' + df['End Station']
     common_trip = df['Frequent Trip'].mode()[0]
     print ('\nMost common trip:', common_trip)
-    
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -165,19 +166,19 @@ def user_stats(df):
         print ('\nEarliest birth year: ', earliest_birth_year)
     except KeyError:
         print ('\n Earliest birth year: No Data available')
-    
-    try:    
+
+    try:
         recent_birth_year = int(df['Birth Year'].max())
         print ('\nMost recent birth year: ', recent_birth_year)
     except KeyError:
         print ('\n Most recent birth year: No Data available')
-        
-    try:    
+
+    try:
         common_birth_year =  int(df['Birth Year'].mode()[0])
         print ('\nMost common birth year: ', common_birth_year)
     except KeyError:
           print ('\nMost common birth year: No Data available')
-            
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 def additional_data(df):
@@ -206,5 +207,3 @@ def main():
 
 if __name__ == "__main__":
 	main()
-
-    
