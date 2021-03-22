@@ -85,6 +85,7 @@ def load_data(city, month, day):
 # filter by day of week if applicable
     if day != 'all':
         # filter by day of week to create the new dataframe
+        #df['day_of_week'] returns values like Friday, Monday, etc. The format is title format hence why title method id called
         df = df[df['day_of_week'] == day.title()]
     return df
 
