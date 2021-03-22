@@ -18,7 +18,7 @@ washington.csv
 chicago.csv
 new_york_city.csv
 
-###Datasets
+### Datasets
 Randomly selected data for the first six months of 2017 are provided for all three cities. All three of the data files contain the same core six (6) columns:
 
 Start Time
@@ -34,5 +34,7 @@ Gender
 Birth Year
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Found these links to be very helpful in getting this project done
+https://www.geeksforgeeks.org/
+https://stackoverflow.com/
 https://github.com/ramyalsammarae/bikeshare/blob/master/bikeshare.py 
