@@ -2,6 +2,7 @@ import time
 import pandas as pd
 import numpy as np
 
+#csv data is uploaded to github in project
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -70,6 +71,7 @@ def load_data(city, month, day):
 # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 # extract month and day of week from Start Time to create new columns
+#extract hour from Start Time to create new column
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
     df['hour'] = df['Start Time'].dt.hour
@@ -84,6 +86,7 @@ def load_data(city, month, day):
 # filter by day of week if applicable
     if day != 'all':
         # filter by day of week to create the new dataframe
+        #df['day_of_week'] returns values like Friday, Monday, etc. The format is title format hence why title method id called
         df = df[df['day_of_week'] == day.title()]
     return df
 
