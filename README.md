@@ -33,6 +33,20 @@ The Chicago and New York City data also have the following two columns:
 Gender
 Birth Year
 
+### Statistics computed
+The most common month
+The most common day of week
+The most common start hour
+The most commonly used start station
+The most commonly used end station
+The most frequent combination of start station and end station trip
+Total travel time
+The mean travel time
+Count of user types
+Count of gender
+The arliest, most recent, and most common year of birth
+
+
 ### Credits
 Found these links to be very helpful in getting this project done
 https://www.geeksforgeeks.org/
